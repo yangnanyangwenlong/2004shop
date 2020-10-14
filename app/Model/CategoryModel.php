@@ -1,12 +1,12 @@
 <?php
 
-namespace App;
+namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Goods extends Model
+class CategoryModel extends Model
 {
-    protected $table = 'p_goods';
+    protected $table = 'p_category';
     protected $primaryKey = 'goods_id';
     public $timestamps = false;
     //黑名单
