@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+//登录 ;注册
+Route::prefix('login')->group(function(){
+	// Route::git('');
+});
