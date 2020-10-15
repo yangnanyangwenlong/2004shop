@@ -11,4 +11,5 @@ class Goods extends Model
     public $timestamps = false;
     //黑名单
     protected $guarded = []; 
+    
 }

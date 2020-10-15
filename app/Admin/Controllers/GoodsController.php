@@ -45,6 +45,7 @@ class GoodsController extends AdminController
         return $grid;
     }
 
+
     /**
      * Make a show builder.
      *
