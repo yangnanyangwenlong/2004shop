@@ -1,0 +1,524 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"R",
+				"Request"
+			],
+			[
+				"con",
+				"content"
+			],
+			[
+				"post",
+				"postArray"
+			],
+			[
+				"sim",
+				"simplexml_load_string"
+			],
+			[
+				"admin",
+				"admin_name"
+			],
+			[
+				"wher",
+				"goodsWhere"
+			],
+			[
+				"Gs",
+				"GsccModel"
+			],
+			[
+				"name",
+				"namesj"
+			],
+			[
+				"mysqli_",
+				"mysqli_query"
+			],
+			[
+				"mysqli",
+				"mysqli_query"
+			],
+			[
+				"id",
+				"id"
+			],
+			[
+				"set",
+				"setcookie"
+			],
+			[
+				"se",
+				"setcookie"
+			],
+			[
+				"pwd",
+				"pwd"
+			],
+			[
+				"G_",
+				"G_price"
+			],
+			[
+				"mysq",
+				"mysql_query"
+			],
+			[
+				"sub_",
+				"substr_count"
+			],
+			[
+				"echo",
+				"echo\techo \"…\""
+			],
+			[
+				"te",
+				"tex"
+			],
+			[
+				"a",
+				"apc_store"
+			],
+			[
+				"ec",
+				"echo"
+			],
+			[
+				"18",
+				"18"
+			],
+			[
+				"for",
+				"for\tfor …"
+			],
+			[
+				"urp",
+				"urpwd"
+			],
+			[
+				"p",
+				"php\t<?php … ?>"
+			],
+			[
+				"ech",
+				"echo\techo \"…\""
+			],
+			[
+				"he",
+				"header"
+			],
+			[
+				"t",
+				"table\tTag"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"array",
+				"array"
+			],
+			[
+				"fo",
+				"font\tTag"
+			],
+			[
+				"as_",
+				"as_four"
+			],
+			[
+				"goo",
+				"goods_price"
+			],
+			[
+				"file_",
+				"file_put_contents"
+			],
+			[
+				"go",
+				"goods_name"
+			],
+			[
+				"g",
+				"goods_name"
+			],
+			[
+				"ma",
+				"meta\tTag"
+			],
+			[
+				"opt",
+				"option\tTag"
+			],
+			[
+				"head",
+				"header"
+			],
+			[
+				"b",
+				"border\tAttr"
+			],
+			[
+				"ac",
+				"action\tAttr"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"me",
+				"meta\tTag"
+			],
+			[
+				"h",
+				"html\thtml"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"About"
+			],
+			[
+				"install controll",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Add Channel"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"view",
+				"View: Toggle Menu"
+			],
+			[
+				"view:",
+				"View: Toggle Side Bar"
+			],
+			[
+				"sftp",
+				"SFTP: Browse Server…"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Add Channel"
+			],
+			[
+				"admin",
+				"Preferences: Alignment Key Bindings – Default"
+			],
+			[
+				"Install Package",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 416.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/www/2004shop/app/Http/Controllers/Login/LoginController.php",
+		"/D/www/2004shop/.env",
+		"/D/www/2004shop/tests/.env",
+		"/D/www/2004shop/resources/views/index/index.blade.php",
+		"/D/www/2004shop/app/Http/Controllers/Index/IndexController.php",
+		"/D/www/2004shop/app/Goods.php",
+		"/D/www/2004shop/app/Http/Controllers/PaymentController.php",
+		"/D/www/2004shop/routes/web.php",
+		"/D/www/2004shop/resources/views/login/login.blade.php",
+		"/D/www/2004shop/app/Http/Controllers/Login/RegisterController.php",
+		"/D/www/2004shop/app/Model/UsersModel.php",
+		"/D/www/2004shop/app/Model/CategoryModel.php",
+		"/D/www/2004shop/app/Admin/Controllers/CategoryController.php",
+		"/D/www/2004shop/app/Admin/routes.php",
+		"/D/www/2004shop/app/Admin/Controllers/CategorysModel.php",
+		"/D/www/2004shop/resources/views/login/register.blade.php",
+		"/D/www/2004shop/app/Http/Controllers/Admin/AdminController.php",
+		"/D/www/2004shop/app/Http/Controllers/Login/LogindoController.php",
+		"/D/www/2004shop/resources/views/login/logindo.blade.php",
+		"/D/www/2004shop/app/Admin/Controllers/GoodsController.php",
+		"/D/www/2004shop/resources/views/Gluttonous/gluttonous.blade.php",
+		"/D/www/2004shop/app/Http/Controllers/GluttonousController.php",
+		"/D/www/2004shop/config/filesystems.php",
+		"/D/www/2004shop/config/app.php",
+		"/D/lnmp/nginx-1.19.3/conf/vhost/2004shop.conf",
+		"/D/lnmp/nginx-1.19.3/conf/nginx.conf",
+		"/D/lnmp/php-7.3.23-nts-Win32-VC15-x64/php.ini",
+		"/D/www/2004shop/resources/views/Inst/create.blade.php",
+		"/D/www/2004shop/app/Http/Controllers/Inst/InstController.php",
+		"/D/lnmp/nginx-1.19.3/conf/vhost/2004.conf",
+		"/D/www/2004laravel/app/Http/Controllers/User/UserController.php",
+		"/D/www/2004laravel/resources/views/user/index.blade.php",
+		"/D/www/2004laravel/resources/views/user/show.blade.php",
+		"/D/www/2004laravel/resources/views/user/login.blade.php",
+		"/D/www/2004laravel/app/Http/Controllers/Admin/TestController.php",
+		"/D/www/2004laravel/.env",
+		"/D/www/2004laravel/routes/web.php",
+		"/D/www/2004laravel/app/Http/Controllers/Ppt/PptController.php",
+		"/D/www/2004laravel/app/Http/Controllers/PptController.php",
+		"/D/www/2004laravel/app/Http/Controllers/Ppt.php",
+		"/D/www/2004/index.php",
+		"/D/测试/201108012/index.html",
+		"/D/www/2004/index.html",
+		"/D/测试/201108012/demo4.html",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/D/测试/201108012/demo2.html",
+		"/D/测试/201108012/demo3.html",
+		"/D/phpstudy_pro/WWW/tps/application/admin/model/Role.php",
+		"/D/phpstudy_pro/WWW/tps/application/admin/controller/Login.php",
+		"/D/phpstudy_pro/WWW/tps/application/admin/model/Admin.php",
+		"/D/phpstudy_pro/WWW/tps/application/admin/controller/Index.php",
+		"/D/phpstudy_pro/WWW/tps/application/admin/view/index/index.html",
+		"/D/phpstudy_pro/WWW/tps/application/common/model/Admin.php",
+		"/D/phpstudy_pro/WWW/tps/application/admin/view/login/index.html",
+		"/D/phpstudy_pro/WWW/tps/application/common/controller/admin/Login.php",
+		"/D/phpstudy_pro/WWW/tps/application/admin/controller/logo.php",
+		"/D/phpstudy_pro/WWW/education/application/index/Model/Ppt.php",
+		"/D/phpstudy_pro/WWW/education/application/index/controller/Ppt.php",
+		"/D/phpstudy_pro/WWW/education/application/index/view/ppt/create.html",
+		"/D/phpstudy_pro/WWW/education/application/index/view/login/ppt.html",
+		"/D/phpstudy_pro/WWW/education/application/index/view/index/index.html",
+		"/D/phpstudy_pro/WWW/education/application/index/controller/Login.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/view/logo/create.html",
+		"/D/phpstudy_pro/WWW/education/application/admin/controller/Logo.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/view/logo/index.html",
+		"/D/phpstudy_pro/WWW/education/application/admin/Model/Logo.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/controller/Course.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/view/public/left.html",
+		"/D/phpstudy_pro/WWW/education/application/admin/controller/Login.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/controller/Index.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/controller/common.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/controller/Role.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/controller/Node.php",
+		"/D/phpstudy_pro/WWW/education/config/database.php",
+		"/D/视频/Desktop/education/build.php",
+		"/D/视频/Desktop/education/nnonnonno.php",
+		"/D/视频/Desktop/education/demo1.php",
+		"/D/视频/Desktop/education/application/admin/controller/Admin.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/controller/Admin.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/view/admin/giverot.html",
+		"/D/phpstudy_pro/WWW/education/application/admin/controller/Shuoin.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/view/admin/index.html",
+		"/D/phpstudy_pro/WWW/education/application/admin/model/Admins.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/view/shuoin/index.html",
+		"/D/phpstudy_pro/WWW/education/application/admin/model/Admin.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/view/admin/create.html",
+		"/D/phpstudy_pro/WWW/education/application/admin/model/Rnode.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/model/Chain.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/common.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/view/role/index.html",
+		"/D/phpstudy_pro/WWW/education/application/admin/controller/Common.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/controller/Section.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/view/node/edit.html",
+		"/D/phpstudy_pro/WWW/education/application/admin/view/node/index.html",
+		"/D/phpstudy_pro/WWW/education/application/admin/view/node/create.html",
+		"/D/phpstudy_pro/WWW/education/application/admin/view/role/create.html",
+		"/D/phpstudy_pro/WWW/education/application/admin/view/role/edit.html",
+		"/D/phpstudy_pro/WWW/education/application/admin/model/Node.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/model/Role.php",
+		"/D/phpstudy_pro/WWW/education/application/admin/view/role/list.html",
+		"/D/phpstudy_pro/WWW/education/application/index/model/Node.php",
+		"/D/phpstudy_pro/WWW/education/application/index/controller/Node.php",
+		"/D/phpstudy_pro/WWW/education/application/index/controller/Role.php",
+		"/D/phpstudy_pro/WWW/education/sms/src/Clients/RsaKeyPairClient.php",
+		"/D/phpstudy_pro/WWW/education/.gitignore",
+		"/D/phpstudy_pro/WWW/education/application/index/controller/Course.php",
+		"/D/phpstudy_pro/WWW/education/application/index/view/course/detail.html",
+		"/D/phpstudy_pro/WWW/education/application/index/controller/Order.php",
+		"/D/phpstudy_pro/WWW/education/config/alipay.php",
+		"/D/phpstudy_pro/WWW/education/application/index/view/order/return_url.html",
+		"/D/phpstudy_pro/WWW/education/application/index/controller/Index.php",
+		"/D/phpstudy_pro/WWW/education/application/index/view/course/coursecont1.html",
+		"/D/phpstudy_pro/WWW/education/application/index/view/mycourse/mycourse.html",
+		"/D/phpstudy_pro/WWW/education/application/index/view/course/ppt.html",
+		"/D/phpstudy_pro/WWW/education/application/index/controller/Mycourse.php",
+		"/D/phpstudy_pro/WWW/education/application/index/view/public/head.html",
+		"/D/phpstudy_pro/WWW/education/application/index/controller/Teacher.php",
+		"/D/phpstudy_pro/WWW/education/application/index/view/teacher/detail.html",
+		"/D/phpstudy_pro/WWW/education/application/admin/view/course/index.html",
+		"/D/phpstudy_pro/WWW/education/application/index/controller/Collect.php",
+		"/D/phpstudy_pro/WWW/education/application/common.php",
+		"/D/phpstudy_pro/WWW/education/application/index/view/order/pay.html",
+		"/D/phpstudy_pro/WWW/education/application/index/view/order/confirmorder.html",
+		"/D/phpstudy_pro/WWW/education/application/index/controller/Common.php",
+		"/D/phpstudy_pro/WWW/education/application/zzzz/controller/Course.php",
+		"/D/phpstudy_pro/WWW/education/application/index/view/login/register.html",
+		"/D/phpstudy_pro/WWW/education/application/index/common.php",
+		"/D/phpstudy_pro/WWW/education/application/zzzz/controller/Register.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 622.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 221.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "IndexController.sublime-project",
+	"replace":
+	{
+		"height": 85.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pac",
+				"sms\\src\\Clients\\RsaKeyPairClient.php"
+			],
+			[
+				"",
+				".gitignore"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 264.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

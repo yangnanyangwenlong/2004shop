@@ -35,9 +35,9 @@ class RegisterController extends Controller
             'email'     => $request->post('email'),
             'password'  => $pass
         ];
-        // dd($u);
-        $uid = UsersModel::insertGetId($u);
 
+        $uid = UsersModel::insertGetId($u);
+        // dd($uid);
         //生成激活码
         $active_code = Str::random(64);
         // dd($active_code);
@@ -48,7 +48,7 @@ class RegisterController extends Controller
 
         $active_url = env('APP_URL').'/user/active?code='.$active_code;
         
-        dd($active_url);
+        // dd($active_url);
         //注册成功跳转登录
         if($uid)
         {
