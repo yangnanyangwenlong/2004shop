@@ -91,3 +91,17 @@ Route::prefix('test')->group(function(){
     Route::get('guzzlehttp','Index\TestController@guzzlehttp');
     Route::get('test','Index\TestController@test');
 });
+
+Route::prefix('draw')->group(function(){
+    //抽奖
+    Route::get('/','DrawController@create');
+    Route::get('enit','DrawController@enit');
+});
+
+//电影座次
+Route::prefix('film')->group(function(){
+    Route::get('/','FilmController@create');
+    //递归
+    Route::get('dg','FilmController@dg');
+});
+
