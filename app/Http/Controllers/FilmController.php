@@ -11,6 +11,7 @@ class FilmController extends Controller
     }
     public function dg(){
        static $i=20;
+       
 	   echo  $i.'<br>';
 	   $i++;
 	   if ($i<=10){
