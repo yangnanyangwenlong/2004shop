@@ -11,7 +11,7 @@ use GuzzleHttp\Client;
 
 class WeixinController extends Controller
 {
-	private function wx()
+	private function checkSignature()
 	{
 	    $signature = $_GET["signature"];
 	    $timestamp = $_GET["timestamp"];
@@ -29,7 +29,12 @@ class WeixinController extends Controller
 	        return false;
 	    }
 	}
-
+	public function wx(){
+		$token = request()->get('echostr','');
+		if(!empty($token) && $this->checkSignature){
+			echo $token;
+		}
+	}
     //测试ss
     public function test(){
         $toUser="abc";
@@ -39,7 +44,7 @@ class WeixinController extends Controller
         echo $url;
     }
     //微信接入
-    public function checkSignature(Request $request)
+    public function checkSignatures(Request $request)
     {
 
         $echostr = $request->echostr;
