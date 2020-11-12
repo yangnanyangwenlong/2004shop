@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Model\UserModel;
+use App\Models\UserModel;
 use MongoDB\Driver\Session;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Str;

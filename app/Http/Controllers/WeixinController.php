@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redis;
-use App\Model\WxUserModel;
-use App\Model\MediaModel;
+use App\Models\WxUserModel;
+use App\Models\MediaModel;
 use Log;
 use GuzzleHttp\Client;
 

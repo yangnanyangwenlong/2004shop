@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Model\UsersModel;
+use App\Models\UsersModel;
 use GuzzleHttp\Client;
 // use GuzzleHttp\Psr7\Request;
 class LoginController extends Controller
