@@ -215,7 +215,7 @@ class WeixinController extends Controller
             //存到redis中
             Redis::set($key,$token);
             //设置过期时间
-            Redis::expire($key,3600);
+            Redis::expire($key,60*60*2);
         }
 
         return $token;
@@ -290,7 +290,7 @@ class WeixinController extends Controller
                 [
                     'type'=>'click',
                     'name'=>"天气",
-                    'key'=>'WEATHER'
+                    'key'=>$this->weather1()
                 ],
                 [
                     'name'=>"菜单",
@@ -298,6 +298,16 @@ class WeixinController extends Controller
                         [
                             'type'=>'view',
                             'name'=>'百度',
+                            'url'=>'https://www.baidu.com'
+                        ],
+                        [
+                            'type'=>'view',
+                            'name'=>'商场',
+                            'url'=>'https://yangnan.yangwenlong.top'
+                        ],
+                        [
+                            'type'=>'view',
+                            'name'=>'签到',
                             'url'=>'https://www.baidu.com'
                         ],
                     ]

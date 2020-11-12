@@ -121,14 +121,14 @@ Route::prefix('weixin')->group(function(){
     Route::match(['get','post'],'/wx','WeixinController@checkSignature');
     //上传素材{图片}
     Route::get('/guzzle2','WeixinController@guzzle2');
+    //自定义菜单
+    Route::get('/create_menu','WeixinController@create_menu');
     //上传素材{视频}
     Route::get('/shengpin','WeixinController@shengpin');
     //获取access_token
     Route::get('/access_token','WeixinController@access_token');
     //天气(780)
     Route::get('/weather1','WeixinController@weather1');
-    //自定义菜单
-    Route::get('/create_menu','WeixinController@create_menu');
 
 
     //测试1
