@@ -15,9 +15,9 @@ class CartController extends alipayController
     public function index(){
         $user_id = session('user_id');
 //        echo $user_id;die;
-        if(empty($user_id)){
-            return redirect('login/login')->with(['msg'=>'请先登录']);
-        }
+        // if(empty($user_id)){
+        //     return redirect('login/login')->with(['msg'=>'请先登录']);
+        // }
         $CartInfo = CartModel::where('user_id',$user_id)->get();
         $arr = [];
         foreach ($CartInfo as $k=>$v){

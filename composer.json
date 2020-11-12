@@ -12,6 +12,7 @@
         "barryvdh/laravel-debugbar": "^3.5",
         "encore/laravel-admin": "1.*",
         "fideloper/proxy": "^4.0",
+        "guzzlehttp/guzzle": "~6.0",
         "laravel/framework": "^6.18.35",
         "laravel/tinker": "^2.0"
     },
