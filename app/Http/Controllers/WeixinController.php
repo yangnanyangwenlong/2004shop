@@ -29,12 +29,14 @@ class WeixinController extends Controller
 	        return false;
 	    }
 	}
-	public function wx(){
-		$token = request()->get('echostr','');
-		if(!empty($token) && $this->checkSignature){
-			echo $token;
-		}
-	}
+    /**微信接口测试 */
+    public function wx(){
+        $token = request()->get('echostr','');
+        if(!empty($token) && $this->checkSignature()){
+            echo $token;
+        }
+    }
+    
     //测试ss
     public function test(){
         $toUser="abc";
