@@ -290,15 +290,29 @@ class WeixinController extends Controller
                 [
                     'type'=>'click',
                     'name'=>"天气",
-                    'key'=>'WEATHER'
+                    'key'=>$this->weather1()
                 ],
                 [
                     'name'=>"菜单",
                     "sub_button"=>[
                         [
                             'type'=>'view',
-                            'name'=>'百度.',
+                            'name'=>'百度',
                             'url'=>'https://www.baidu.com'
+                        ],
+                    ],
+                    "sub_button"=>[
+                        [
+                            'type'=>'view',
+                            'name'=>'商场',
+                            'url'=>'https://yangnan.yangwenlong.cop'
+                        ],
+                    ],
+                    "sub_button"=>[
+                        [
+                            'type'=>'click',
+                            'name'=>'签到',
+                            'url'=>'https://yangnan.yangwenlong.top'
                         ],
                     ]
                 ],
