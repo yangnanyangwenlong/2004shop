@@ -30,7 +30,7 @@ class WeixinController extends Controller
 	    }
 	}
     /**微信接口测试 */
-    public function wx(){
+    public function test6(){
         $token = request()->get('echostr','');
         if(!empty($token) && $this->checkSignature()){
             echo $token;
@@ -46,7 +46,7 @@ class WeixinController extends Controller
         echo $url;
     }
     //微信接入
-    public function checkSignatures(Request $request)
+    public function wx(Request $request)
     {
 
         $echostr = $request->echostr;
@@ -297,7 +297,7 @@ class WeixinController extends Controller
                     "sub_button"=>[
                         [
                             'type'=>'view',
-                            'name'=>'百度',
+                            'name'=>'百度.',
                             'url'=>'https://www.baidu.com'
                         ],
                     ]

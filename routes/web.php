@@ -135,6 +135,8 @@ Route::prefix('weixin')->group(function(){
     Route::get('/weather','WeixinController@weather');
     //测试2
     Route::get('/test','WeixinController@test');
+    //接口测试
+    Route::get('/test6','WeixinController@test6');
     //测试3(postman)
     Route::get('test2','WeixinController@test2');//get
     Route::post('test3','WeixinController@test3');//post(form-data)
