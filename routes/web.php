@@ -118,11 +118,11 @@ Route::prefix('yangnan')->group(function(){
 
 Route::prefix('weixin')->group(function(){
         //微信开发者服务器接入(即支持get又支持post)
-    Route::match(['get','post'],'/wx','WeixinController@wx');
+    Route::match(['get','post'],'/wx','WeixinController@checkSignature');
     //上传素材{图片}
     Route::get('/guzzle2','WeixinController@guzzle2');
     //上传素材{视频}
-    Route::get('/create_menu','WeixinController@create_menu');
+    Route::get('/shengpin','WeixinController@shengpin');
     //获取access_token
     Route::get('/access_token','WeixinController@access_token');
     //天气(780)

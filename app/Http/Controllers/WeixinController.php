@@ -11,7 +11,7 @@ use GuzzleHttp\Client;
 
 class WeixinController extends Controller
 {
-	private function checkSignature()
+	private function checkSignatures()
 	{
 	    $signature = $_GET["signature"];
 	    $timestamp = $_GET["timestamp"];
@@ -32,7 +32,7 @@ class WeixinController extends Controller
     /**微信接口测试 */
     public function test6(){
         $token = request()->get('echostr','');
-        if(!empty($token) && $this->checkSignature()){
+        if(!empty($token) && $this->checkSignatures()){
             echo $token;
         }
     }
@@ -46,7 +46,7 @@ class WeixinController extends Controller
         echo $url;
     }
     //微信接入
-    public function wx(Request $request)
+    public function checkSignature(Request $request)
     {
 
         $echostr = $request->echostr;
@@ -290,7 +290,7 @@ class WeixinController extends Controller
                 [
                     'type'=>'click',
                     'name'=>"天气",
-                    'key'=>$this->weather1()
+                    'key'=>'WEATHER'
                 ],
                 [
                     'name'=>"菜单",
@@ -299,20 +299,6 @@ class WeixinController extends Controller
                             'type'=>'view',
                             'name'=>'百度',
                             'url'=>'https://www.baidu.com'
-                        ],
-                    ],
-                    "sub_button"=>[
-                        [
-                            'type'=>'view',
-                            'name'=>'商场',
-                            'url'=>'https://yangnan.yangwenlong.cop'
-                        ],
-                    ],
-                    "sub_button"=>[
-                        [
-                            'type'=>'click',
-                            'name'=>'签到',
-                            'url'=>'https://yangnan.yangwenlong.top'
                         ],
                     ]
                 ],
