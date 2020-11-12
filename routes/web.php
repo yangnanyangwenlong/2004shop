@@ -118,7 +118,7 @@ Route::prefix('yangnan')->group(function(){
 
 Route::prefix('weixin')->group(function(){
         //微信开发者服务器接入(即支持get又支持post)
-    Route::match(['get','post'],'/wx','WeixinController@checkSignature');
+    Route::match(['get','post'],'/wx','WeixinController@wx');
     //上传素材{图片}
     Route::get('/guzzle2','WeixinController@guzzle2');
     //上传素材{视频}
@@ -140,4 +140,4 @@ Route::prefix('weixin')->group(function(){
     Route::post('test3','WeixinController@test3');//post(form-data)
     Route::post('test4','WeixinController@test4');//post(raw)
 });
-    
+
