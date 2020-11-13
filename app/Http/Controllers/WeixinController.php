@@ -288,37 +288,38 @@ class WeixinController extends Controller
         //删除接口
         $delete = "https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=".$access_token."";
         $array=[
-            'button'=>[
-                [
-                    'type'=>'click',
-                    'name'=>"天气",
-                    'key'=>'CGIINNNNN'
-                ],
-                [
-                    'name'=>"菜单",
-                    "sub_button"=>[
-                        [
-                            'type'=>'view',
-                            'name'=>'百度',
-                            'url'=>'https://www.baidu.com'
-                        ],
-                        [
-                            'type'=>'view',
-                            'name'=>'商场',
-                            'url'=>'https://yangnan.yangwenlong.top'
-                        ],
-                        [
-                            'type'=>'click',
-                            'name'=>'签到',
-                            'url'=>'https://www.baidu.com'
-                        ]
-                    ]
-                ],
-                [
-                	'name' => "测试",
-                ],
-            ]
-        ];
+            
+		     "button"=>[
+		     [	
+		          "type"=>"click",
+		          "name"=>"天气",
+		          "key"=>"V1001_TODAY_MUSIC"
+		      ],
+		      [
+		           "name"=>"菜单",
+		           "sub_button"=>[
+			            [	
+			               "type"=>"view",
+			               "name"=>"搜索",
+			               "url"=>"http://www.soso.com/"
+			            ],
+			            [
+			                 "type"=>"miniprogram",
+			                 "name"=>"商场",
+			                 "url"=>"http://yangnan.yangwenlong.top",
+			                 "appid"=>"wx286b93c14bbf93aa",
+			                 "pagepath"=>"pages/lunar/index"
+			             ],
+			            [
+			               "type"=>"click",
+			               "name"=>"赞一下我们",
+			               "key"=>"V1001_GOOD"
+			            ]
+		        ]
+		       ]
+		   ]
+		 	
+		 ]; 	
         $client=new Client();
         // dd($client);die;
         $response=$client->request('POST',$url,[
