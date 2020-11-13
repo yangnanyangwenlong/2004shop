@@ -289,31 +289,34 @@ class WeixinController extends Controller
         $delete = "https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=".$access_token."";
         $array=[
             'button'=>[
-                [
+                {
                     'type'=>'click',
                     'name'=>"天气",
-                    'key'=>$this->weather1()
-                ],
+                    'key'=>'/weixin/weather1'
+                },
                 [
                     'name'=>"菜单",
                     "sub_button"=>[
-                        [
+                        {
                             'type'=>'view',
                             'name'=>'百度',
                             'url'=>'https://www.baidu.com'
-                        ],
-                        [
+                        },
+                        {
                             'type'=>'view',
                             'name'=>'商场',
                             'url'=>'https://yangnan.yangwenlong.top'
-                        ],
-                        [
+                        },
+                        {
                             'type'=>'view',
                             'name'=>'签到',
-                            'url'=>'https://www.baidu.com'
-                        ],
+                            'key'=>'V1001_GOOD'
+                        }
                     ]
                 ],
+                [
+                	'name'=>"测试"，
+                ]
             ]
         ];
         $client=new Client();
