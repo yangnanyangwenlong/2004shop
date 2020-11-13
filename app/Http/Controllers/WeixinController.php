@@ -292,7 +292,7 @@ class WeixinController extends Controller
                 [
                     'type'=>'click',
                     'name'=>"天气",
-                    'key'=>$this->weather1()
+                    'key'=>'CGIINNNNN'
                 ],
                 [
                     'name'=>"菜单",
@@ -311,7 +311,7 @@ class WeixinController extends Controller
                             'type'=>'click',
                             'name'=>'签到',
                             'url'=>'https://www.baidu.com'
-                        ],
+                        ]
                     ]
                 ],
                 [
