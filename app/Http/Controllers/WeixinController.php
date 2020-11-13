@@ -292,7 +292,7 @@ class WeixinController extends Controller
                 [
                     'type'=>'click',
                     'name'=>"天气",
-                    'key'=>"V1001_TODAY_MUSIC"
+                    'key'=>$this->weather1()
                 ],
                 [
                     'name'=>"菜单",
@@ -310,7 +310,7 @@ class WeixinController extends Controller
                         [
                             'type'=>'click',
                             'name'=>'签到',
-                            'url'=>'V1001_GOOD'
+                            'url'=>'https://www.baidu.com'
                         ],
                     ]
                 ],
@@ -321,7 +321,7 @@ class WeixinController extends Controller
         ];
         $client=new Client();
         // dd($client);die;
-        $response=$client->request('POST',$url,[
+        $response=$client->request('POST',$delete,[
             'verify'=>false,
             'body'=>json_encode($array,JSON_UNESCAPED_UNICODE),
         ]);
