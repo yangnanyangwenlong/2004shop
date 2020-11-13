@@ -11,6 +11,7 @@ use GuzzleHttp\Client;
 
 class WeixinController extends Controller
 {
+	//接口测试
 	private function checkSignatures()
 	{
 	    $signature = $_GET["signature"];
@@ -272,7 +273,8 @@ class WeixinController extends Controller
                 ]   //上传的文件路径
             ] 
         ]);
-
+        $data = $response->getBody();//响应数据
+        echo $data;
 
     }
 
