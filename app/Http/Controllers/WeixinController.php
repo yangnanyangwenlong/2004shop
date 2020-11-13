@@ -316,7 +316,7 @@ class WeixinController extends Controller
                 ],
                 [
                 	'name' => "测试",
-                ];
+                ],
             ]
         ];
         $client=new Client();
