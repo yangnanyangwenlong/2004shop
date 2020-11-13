@@ -321,7 +321,7 @@ class WeixinController extends Controller
         ];
         $client=new Client();
         // dd($client);die;
-        $response=$client->request('POST',$delete,[
+        $response=$client->request('POST',$url,[
             'verify'=>false,
             'body'=>json_encode($array,JSON_UNESCAPED_UNICODE),
         ]);
