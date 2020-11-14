@@ -51,9 +51,9 @@ class WeixinController extends Controller
     {
 
         $echostr = $request->echostr;
-        $signature = $_GET["signature"];
-        $timestamp = $_GET["timestamp"];
-        $nonce = $_GET["nonce"];
+        $signature = request()->get("signature");//["signature"];
+        $timestamp = request()->get("timestamp");//$_GET["timestamp"];
+        $nonce = request()->get("nonce");//$_GET["nonce"];
 
         $token = env('WX_TOKEN');
         $tmpArr = array($token, $timestamp, $nonce);
@@ -124,7 +124,9 @@ class WeixinController extends Controller
 //                   file_put_contents('wx_text.log',$data,'FILE_APPEND');
 //                    echo "";
 //                    die;
+                   $this->V1001_TODAY_MUID();
                     switch ($data->Content){
+                    	
                         case "天气":
                             $category=1;
                             $content=$this->weather1();
@@ -215,8 +217,9 @@ class WeixinController extends Controller
             $token=$data['access_token'];
             //存到redis中
             Redis::set($key,$token);
+            // echo $token
             //设置过期时间
-            Redis::expire($key,60*60*2);
+            Redis::expire($key,2*60*60);
         }
 
         return $token;
@@ -286,14 +289,14 @@ class WeixinController extends Controller
         //接口创建
         $url="https://api.weixin.qq.com/cgi-bin/menu/create?access_token=".$access_token."";
         //删除接口
-        $delete = "https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=".$access_token."";
+        // $delete = "https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=".$access_token."";
         $array=[
             
 		     "button"=>[
 		     [	
 		          "type"=>"click",
 		          "name"=>"天气",
-		          "key"=>"V1001_TODAY_MUSIC"
+		          "key"=>"V1001_TODAY_MUID"
 		      ],
 		      [
 		           "name"=>"菜单",
@@ -304,37 +307,104 @@ class WeixinController extends Controller
 			               "url"=>"http://www.soso.com/"
 			            ],
 			            [
-			                 "type"=>"miniprogram",
+			                 "type"=>"view",
 			                 "name"=>"商场",
 			                 "url"=>"http://yangnan.yangwenlong.top",
-			                 "appid"=>"wx286b93c14bbf93aa",
-			                 "pagepath"=>"pages/lunar/index"
+			            
 			             ],
 			            [
 			               "type"=>"click",
-			               "name"=>"赞一下我们",
+			               "name"=>"签到",
 			               "key"=>"V1001_GOOD"
 			            ]
-		        ]
+		        	]
+		       ],
+		       [
+		       		"name"=>"娱乐",
+		       		"sub_button"=>[
+		       			[
+			       			"type"=>"view",
+			       			"name"=>"笑话",
+			       			"url"=>"http://xiaohua.zol.com.cn/"
+		       			],
+		       			[
+			       			"type"=>"view",
+			       			"name"=>"喜马拉雅",
+			       			"url"=>"https://www.ximalaya.com"
+		       			],
+		       			[
+			       			"type"=>"view",
+			       			"name"=>"视频",
+			       			"url"=>"https://www.bilibili.com"
+		       			],
+		       			[
+			       			"type"=>"view",
+			       			"name"=>"拍黄片",
+			       			"url"=>"https://www.php.net"
+		       			],
+
+
+		       		]
 		       ]
 		   ]
 		 	
 		 ]; 	
-        $client=new Client();
-        // dd($client);die;
-        $response=$client->request('POST',$url,[
-            'verify'=>false,
-            'body'=>json_encode($array,JSON_UNESCAPED_UNICODE),
-        ]);
-        $data=$response->getBody();
-        return $data;
+        
+		$a= $this->http_post($url,json_encode($array,JSON_UNESCAPED_UNICODE));
+			dd($a);
+        //$client=new Client();
+       // dd("ok");die;
+        //$response=$client->request('POST',$url,[
+         //   'verify'=>false,
+          //  'body'=>json_encode($array,JSON_UNESCAPED_UNICODE),
+        //]);
+       // $data=$response->getBody();
+      		// dd($data);
+        // return $data;
     }
 
 
+    public function http_post($url,$data){
+        $curl = curl_init(); //初始化
+        curl_setopt($curl, CURLOPT_URL, $url);//向那个url地址上面发送
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST,FALSE);//需不需要带证书
+        curl_setopt($curl, CURLOPT_POST, 1); //是否是post方式 1是，0不是
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);//需不需要输出
+        $output = curl_exec($curl);//执行
+        curl_close($curl); //关闭
+        return $output;
+    }
 
 
-
-
+	//初始化git 
+　　$ch = curl_init();  
+	 　　//设置选项，包括URL
+	　　curl_setopt($ch, CURLOPT_URL, "http://www.jb51.net");
+	　　curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	　　curl_setopt($ch, CURLOPT_HEADER, 0); 
+	 　　//执行并获取HTML文档内容
+	　　$output = curl_exec($ch); 
+	 　　//释放curl句柄
+	　　curl_close($ch); 
+	 　　//打印获得的数据
+	　　print_r($output);
+		//post
+	　 $url = "http://localhost/web_services.php";
+	　　$post_data = array ("username" => "bob","key" => "12345");  
+	 　　$ch = curl_init(); 
+	 　　curl_setopt($ch, CURLOPT_URL, $url);
+	　　curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	　　// post数据
+	　　curl_setopt($ch, CURLOPT_POST, 1);
+	　　// post的变量
+	　　curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data); 
+	 　　$output = curl_exec($ch);
+	　　 curl_close($ch); 
+	 　　//打印获得的数据
+	　　print_r($output); 
+　　$output_array = json_decode($output,true);
 
 
 
