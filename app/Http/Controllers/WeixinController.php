@@ -365,6 +365,7 @@ class WeixinController extends Controller
 
 
     public function http_post($url,$data){
+    	
         $curl = curl_init(); //初始化
         curl_setopt($curl, CURLOPT_URL, $url);//向那个url地址上面发送
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
@@ -380,7 +381,7 @@ class WeixinController extends Controller
 
 	//初始化git 
 　　$ch = curl_init();  
-	 　　//设置选项，包括URL
+	 　　//设置选项，包括URL/////nnnnnnnn
 	　　curl_setopt($ch, CURLOPT_URL, "http://www.jb51.net");
 	　　curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	　　curl_setopt($ch, CURLOPT_HEADER, 0); 
