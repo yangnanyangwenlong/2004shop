@@ -39,7 +39,7 @@ class WeixinController extends Controller
     }
     
     //测试ss
-    public function test(){
+    public function testssss(){
         $toUser="abc";
         $token=$this->access_token();
 //        echo $token;die;
@@ -365,7 +365,6 @@ class WeixinController extends Controller
 
 
     public function http_post($url,$data){
-    	
         $curl = curl_init(); //初始化
         curl_setopt($curl, CURLOPT_URL, $url);//向那个url地址上面发送
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
@@ -377,36 +376,6 @@ class WeixinController extends Controller
         curl_close($curl); //关闭
         return $output;
     }
-
-
-	//初始化git 
-　　$ch = curl_init();  
-	 　　//设置选项，包括URL/////nnnnnnnn
-	　　curl_setopt($ch, CURLOPT_URL, "http://www.jb51.net");
-	　　curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	　　curl_setopt($ch, CURLOPT_HEADER, 0); 
-	 　　//执行并获取HTML文档内容
-	　　$output = curl_exec($ch); 
-	 　　//释放curl句柄
-	　　curl_close($ch); 
-	 　　//打印获得的数据
-	　　print_r($output);
-		//post
-	　 $url = "http://localhost/web_services.php";
-	　　$post_data = array ("username" => "bob","key" => "12345");  
-	 　　$ch = curl_init(); 
-	 　　curl_setopt($ch, CURLOPT_URL, $url);
-	　　curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	　　// post数据
-	　　curl_setopt($ch, CURLOPT_POST, 1);
-	　　// post的变量
-	　　curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data); 
-	 　　$output = curl_exec($ch);
-	　　 curl_close($ch); 
-	 　　//打印获得的数据
-	　　print_r($output); 
-　　$output_array = json_decode($output,true);
-
 
 
     //测试
@@ -438,6 +407,34 @@ class WeixinController extends Controller
         $data = simplexml_load_string($xml_str, 'SimpleXMLElement', LIBXML_NOCDATA);
         echo $data->ToUserName;
     }
+
+
+
+
+
+
+
+
+
+
+    //api
+    public function userinfo(){
+    	echo __METHOD__;
+    }
+    
+    public function test(){
+    	$goods_info = [
+    		'goods_id' => '123',
+    		'goods_name' => '老武',
+    		'price' => '0.00'
+    	];
+    	echo (json_encode($goods_info));
+    }
+
+    public function __construct(){
+        app('debugbar')->disable();     //关闭调试
+    }
+
 }
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

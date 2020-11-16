@@ -129,7 +129,7 @@ Route::prefix('weixin')->group(function(){
     Route::get('/access_token','WeixinController@access_token');
     //天气(780)
     Route::get('/weather1','WeixinController@weather1');
-
+    //
 
     //测试1
     Route::get('/weather','WeixinController@weather');
@@ -142,4 +142,8 @@ Route::prefix('weixin')->group(function(){
     Route::post('test3','WeixinController@test3');//post(form-data)
     Route::post('test4','WeixinController@test4');//post(raw)
 });
-
+ //api
+Route::prefix('api')->group(function(){
+    Route::get('/userinfo','WeixinController@userinfo');
+    Route::get('/test','WeixinController@test');
+});
