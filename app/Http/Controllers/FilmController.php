@@ -19,4 +19,8 @@ class FilmController extends Controller
 	      return $i;
 		}
     }
+    //盒子div 轮播图模拟
+    public function home(){
+        return view('home');
+    }
 }

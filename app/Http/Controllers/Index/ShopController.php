@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redis;
 use App\Models\Shop as ShopModel;
+use App\Models\GoodsModel;//商品表
 
 class ShopController extends Controller
 {
@@ -32,4 +33,19 @@ class ShopController extends Controller
 //        dd($shop_detail);
         return view('shop.detail',['shop_detail'=>$shop_detail]);
     }
+    //微信列表数据
+    public function goodslist(){
+        $g = GoodsModel::select('goods_id','goods_name','shop_price','goods_img')->limit(10)->get()->toArray();
+        // dump($g);
+        //返回参数
+        $respoense = [
+            'errno' => 0,
+            'msg' => 'ok',
+            'data' => [
+                'list' => $g
+            ]
+        ];
+        return $respoense;
+    }
+
 }

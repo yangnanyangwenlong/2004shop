@@ -1,0 +1,19 @@
+/*轮播图*/
+.on{
+	padding:130px;
+    /*width:1450px;*/
+    border:2px solid red;
+    top:5px;
+    left:10px;	
+}
+/*导航栏*/
+.env{
+	/*padding: 130px;*/
+	border: 2px solid red;
+	/*margin: 15px;*/
+	top: 15px;
+}
+/*内容*/
+.conent{
+	
+}

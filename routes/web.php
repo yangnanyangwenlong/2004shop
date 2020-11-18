@@ -146,4 +146,9 @@ Route::prefix('weixin')->group(function(){
 Route::prefix('api')->group(function(){
     Route::get('/userinfo','WeixinController@userinfo');
     Route::get('/test','WeixinController@test');
+    Route::get('/long','WeixinController@long');//登录
+    Route::get('/goodslist','Index\ShopController@goodslist');//
 });
+
+//盒子 div
+Route::get('home','FilmController@home');
