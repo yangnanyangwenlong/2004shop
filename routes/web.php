@@ -144,6 +144,7 @@ Route::prefix('weixin')->group(function(){
 });
  //api
 Route::prefix('api')->group(function(){
+    
     Route::get('/userinfo','WeixinController@userinfo');
     Route::get('/test','WeixinController@test');
     Route::get('/long','WeixinController@long');//登录

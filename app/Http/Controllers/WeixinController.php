@@ -39,7 +39,8 @@ class WeixinController extends Controller
     }
     
     //测试ss
-    public function testssss(){
+    public function testssss()
+    {
         $toUser="abc";
         $token=$this->access_token();
 //        echo $token;die;

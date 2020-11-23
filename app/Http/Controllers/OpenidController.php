@@ -9,5 +9,6 @@ class OpenidController extends Controller
 	//微信小程序登录
     public function index(){
     	 echo "okookkoko";
+    	 
     }
 }
