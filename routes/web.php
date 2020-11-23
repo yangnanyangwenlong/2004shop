@@ -148,6 +148,8 @@ Route::prefix('api')->group(function(){
     Route::get('/test','WeixinController@test');
     Route::get('/long','WeixinController@long');//登录
     Route::get('/goodslist','Index\ShopController@goodslist');//
+    Route::get('/goods','Index\ShopController@goods');//
+    Route::get('/opendid','OpenidController@index');
 });
 
 //盒子 div

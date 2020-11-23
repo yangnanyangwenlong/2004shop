@@ -34,18 +34,43 @@ class ShopController extends Controller
         return view('shop.detail',['shop_detail'=>$shop_detail]);
     }
     //微信列表数据
-    public function goodslist(){
-        $g = GoodsModel::select('goods_id','goods_name','shop_price','goods_img')->limit(10)->get()->toArray();
+    public function goodslist(Request $request){
+         $goods_id = $request->get('goods_id');
+         $g = GoodsModel::select('goods_id','goods_name','shop_price','goods_img')->paginate(5);
         // dump($g);
         //返回参数
         $respoense = [
             'errno' => 0,
             'msg' => 'ok',
             'data' => [
-                'list' => $g
+                'list' => $g->items()
             ]
         ];
         return $respoense;
+        // dump($g);
+
+    }
+
+
+
+
+    //商品详情
+    public function goods(Request $request){
+         
+        $goods_id = $request->get('goods_id');
+        // dump($goods_id);
+        $g = GoodsModel::find($goods_id);
+        // dd($g);
+        // $list = GoodsModel::where()->first();
+       //返回参数
+       $respoense = [
+            'errno' => 0,
+            'msg' => 'ok',
+            'data' => [
+                'lists' => $g
+            ]
+       ];
+       return $respoense;
     }
 
 }
