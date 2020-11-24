@@ -33,6 +33,7 @@ class ShopController extends Controller
 //        dd($shop_detail);
         return view('shop.detail',['shop_detail'=>$shop_detail]);
     }
+    //wocl
     //微信列表数据
     public function goodslist(Request $request){
          $goods_id = $request->get('goods_id');
