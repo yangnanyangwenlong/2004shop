@@ -114,6 +114,20 @@ Route::prefix('yangnan')->group(function(){
     Route::get('/ppt','YangnanController@ppt');  //购物车首页
 });
 
+//小程序接口
+Route::prefix('/apis')->group(function(){
+    Route::get('/home-login','Weixin\ApiController@homeLogin');     //小程序首页登录
+    Route::post('/user-login','Weixin\ApiController@userLogin');     //个人中心登录
+    Route::get('/userinfo','Weixin\ApiController@userInfo');
+    Route::get('/goodslist','Weixin\ApiController@goodsList');      //商品列表
+    Route::get('/goods','Weixin\ApiController@goodsInfo');          //商品详情
+    Route::post('/add-cart','Weixin\ApiController@addCart')->middleware('check.token');          //加入购物车
+    Route::get('/adduser','Weixin\ApiController@addUser');          //添加用户
+    Route::get('/cart-list','Weixin\ApiController@cartList');          //购物车列表
+    Route::get('/add-fav','Weixin\ApiController@addFav');          //加入收藏
+});
+
+
 //微信
 
 Route::prefix('weixin')->group(function(){
@@ -155,3 +169,4 @@ Route::prefix('api')->group(function(){
 
 //盒子 div
 Route::get('home','FilmController@home');
+

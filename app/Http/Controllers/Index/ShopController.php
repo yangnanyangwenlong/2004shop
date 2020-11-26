@@ -35,19 +35,22 @@ class ShopController extends Controller
     }
     //wocl
     //微信列表数据
+    //
     public function goodslist(Request $request){
-         $goods_id = $request->get('goods_id');
-         $g = GoodsModel::select('goods_id','goods_name','shop_price','goods_img')->paginate(5);
-        // dump($g);
-        //返回参数
-        $respoense = [
+
+        // dd(1111);
+        $page_size = $request->get('size');
+        $g = GoodsModel::select('goods_id', 'goods_name', 'shop_price', 'goods_img')->paginate($page_size);
+        // dd($g);
+
+        $response = [
             'errno' => 0,
             'msg' => 'ok',
             'data' => [
                 'list' => $g->items()
             ]
         ];
-        return $respoense;
+        return $response;
         // dump($g);
 
     }
