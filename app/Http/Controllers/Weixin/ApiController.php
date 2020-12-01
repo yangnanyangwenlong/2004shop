@@ -264,7 +264,6 @@ class ApiController extends Controller
             foreach($goods as $k=>&$v)
             {
                 $g = GoodsModel::find($v['goods_id']);
-                // dd($v);
                 $v['goods_name'] = $g->goods_name;
             }
         }else{          //购物车无商品
