@@ -107,7 +107,7 @@ class ApiController extends Controller
 
         //查询商品的价格
         $price = GoodsModel::find($goods_id)->shop_price;
-
+        // dd($price);      
         //将商品存储购物车表 或 Redis
         $info = [
             'goods_id'  => $goods_id,
@@ -257,12 +257,14 @@ class ApiController extends Controller
     {
         $uid = 3829;
         $goods = CartModel::where(['uid'=>$uid])->get();
+        // dd($goods);
         if($goods)      //购物车有商品
         {
             $goods = $goods->toArray();
             foreach($goods as $k=>&$v)
             {
                 $g = GoodsModel::find($v['goods_id']);
+                // dd($v);
                 $v['goods_name'] = $g->goods_name;
             }
         }else{          //购物车无商品

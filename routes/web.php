@@ -127,7 +127,6 @@ Route::prefix('/apis')->group(function(){
     Route::get('/add-fav','Weixin\ApiController@addFav');          //加入收藏
 });
 
-
 //微信
 
 Route::prefix('weixin')->group(function(){
