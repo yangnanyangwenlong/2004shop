@@ -114,7 +114,6 @@ Route::prefix('weixin')->group(function(){        //微信开发者服务器接�
 });
  //api
 Route::prefix('api')->group(function(){
-    
     Route::get('/userinfo','ApiController@userinfo');
     Route::get('/test','ApiController@test');
     Route::get('/long','ApiController@long');//登录
