@@ -100,17 +100,17 @@ Route::prefix('yangnan')->group(function(){
 
 Route::prefix('weixin')->group(function(){        //微信开发者服务器接入(即支持get又支持post)
     Route::match(['get','post'],'/wx','WeixinController@checkSignature');    //上传素材{图片}
-    Route::get('/guzzle2','WeixinController@guzzle2');    //自定义菜单
-    Route::get('/create_menu','WeixinController@create_menu');    //上传素材{视频}
-    Route::get('/shengpin','WeixinController@shengpin');    //获取access_token
-    Route::get('/access_token','WeixinController@access_token');    //天气(780)
-    Route::get('/weather1','WeixinController@weather1');////测试1
-    Route::get('/weather','WeixinController@weather');//测试2
-    Route::get('/test','WeixinController@test');//接口测试
+    // Route::get('/guzzle2','WeixinController@guzzle2');    //自定义菜单
+    // Route::get('/create_menu','WeixinController@create_menu');    //上传素材{视频}
+    // Route::get('/shengpin','WeixinController@shengpin');    //获取access_token
+    // Route::get('/access_token','WeixinController@access_token');    //天气(780)
+    // Route::get('/weather1','WeixinController@weather1');////测试1
+    // Route::get('/weather','WeixinController@weather');//测试2
+    // Route::get('/test','WeixinController@test');//接口测试
     Route::get('/test6','WeixinController@test6');    //测试3(postman)
-    Route::get('test2','WeixinController@test2');//get
-    Route::post('test3','WeixinController@test3');//post(form-data)
-    Route::post('test4','WeixinController@test4');//post(raw)
+    // Route::get('test2','WeixinController@test2');//get
+    // Route::post('test3','WeixinController@test3');//post(form-data)
+    // Route::post('test4','WeixinController@test4');//post(raw)
 });
  //api
 Route::prefix('api')->group(function(){
@@ -141,7 +141,7 @@ Route::get('home','FilmController@home');
 
 //微信
 
-Route::prefix('wx')->group(function(){       
+Route::prefix('wxs')->group(function(){       
     // Route::get('/guzzle2','WxController@guzzle2');    
     // Route::get('/create_menu','WxController@create_menu');   
     // Route::get('/shengpin','WxController@shengpin');   
