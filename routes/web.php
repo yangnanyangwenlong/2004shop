@@ -136,3 +136,21 @@ Route::prefix('/apis')->group(function(){
 //盒子 div
 Route::get('home','FilmController@home');
 
+
+
+
+//微信
+
+Route::prefix('wx')->group(function(){       
+    // Route::get('/guzzle2','WxController@guzzle2');    
+    // Route::get('/create_menu','WxController@create_menu');   
+    // Route::get('/shengpin','WxController@shengpin');   
+    // Route::get('/access_token','WxController@access_token');   
+    // Route::get('/weather1','WxController@weather1');
+    // Route::get('/weather','WxController@weather');
+    // Route::get('/test','WxController@test');
+    Route::get('/test6','WxController@test6');    
+    
+});
+
+
